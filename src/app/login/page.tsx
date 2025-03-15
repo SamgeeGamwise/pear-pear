@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Card from "@/components/Card";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
+import Footer from "../../components/Footer"
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -18,7 +19,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-background">
+    <>
+    <div className="flex justify-center items-center h-screen">
       <Card>
         <h2 className="text-xl font-bold text-center mb-4">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -27,7 +29,9 @@ const Login = () => {
           <Button variant="primary" fullWidth>Login</Button>
         </form>
       </Card>
-    </div>
+    </div>    
+    <Footer />
+    </>
   );
 };
 

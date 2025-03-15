@@ -35,7 +35,7 @@ export default function Home()  {
       <div className="absolute inset-0 flex justify-center items-center">
       <Button variant="primary" size="xl" href='/register'>Start here</Button>
       </div>
-      <Footer />
+      <Footer className='text-white' />
     </div>
   );
 };

@@ -1,19 +1,55 @@
 @import "tailwindcss";
 
-@theme {
-    --color-primary: #5A9E6F;
-    --color-secondary: #D1E231;
-    --color-background: #F4F4F4;
-    --color-text: #333333;
-    --color-card: #D1E231;
-    --color-darkBackground: #1a1a1a;
-    --color-darkText: #e0e0e0;
-    --color-darkCard: #D1E231;
+@custom-variant dark (&:where(.dark, .dark *));
 
-    @media (prefers-color-scheme: dark) {
-        --background: #1a1a1a;
-        --text: #f4f4f4;
-        
-        --card: #333333;
-    }
+@theme {
+  /* Main Palette */
+  --color-primary: #5A9E6F;
+  --color-primary-accent: #46855C;
+
+  --color-secondary: #D1E231;
+  --color-secondary-accent: #B5C32A;
+
+  --color-accent: #3B6B90;
+  --color-accent-light: #6C99BA;
+
+  --color-background: #F4F4F4;
+  --color-text: #333333;
+  --color-card: #D1E231;
+
+  /* Grayscale Palette */
+  --color-white: #FFFFFF;
+  --color-gray-lightest: #F9FAF9;
+  --color-gray-light: #CCCCCC;
+  --color-gray: #999999;
+  --color-gray-dark: #666666;
+  --color-dark: #333333;
+  --color-black: #000000;
+
+  /* Dark mode adjustments */
+  --color-background: var(--gray-light);
+  --color-foreground: var(--dark);
+
+  /* Dark Mode Main Palette */
+  --color-dark-primary: #3F7350;
+  --color-dark-primary-accent: #2F5B3F;
+
+  --color-dark-secondary: #9CA81F;
+  --color-dark-secondary-accent: #7E8A18;
+
+  --color-dark-accent: #285070;
+  --color-dark-accent-light: #507D99;
+
+  --color-dark-background: #1A1A1A;
+  --color-dark-text: #E6E6E6;
+  --color-dark-card: #3B4410;
+
+  /* Dark Mode Grayscale Palette */
+  --color-dark-white: #E6E6E6;
+  --color-dark-gray-lightest: #3A3A3A;
+  --color-dark-gray-light: #555555;
+  --color-dark-gray: #777777;
+  --color-dark-gray-dark: #AAAAAA;
+  --color-dark-dark: #CCCCCC;
+  --color-dark-black: #FFFFFF;
 }

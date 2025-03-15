@@ -7,7 +7,7 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   href?: string;
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "accent";
   size?: "sm" | "md" | "lg" | "xl";
   fullWidth?: boolean;
 }
@@ -27,11 +27,11 @@ const Button: React.FC<ButtonProps> = ({
 
     const variantClasses = {
       primary:
-        "bg-primary text-white hover:bg-green-700 active:scale-95 dark:bg-darkCard dark:text-darkText",
+        "text-white bg-primary dark:bg-dark-primary hover:bg-primary-accent hover:dark:bg-dark-primary-accent active:scale-95",
       secondary:
-        "bg-secondary text-black hover:bg-yellow-400 active:scale-95 dark:bg-darkBackground dark:text-darkText",
-      outline:
-        "border border-gray-500 text-gray-900 hover:bg-gray-100 active:scale-95 dark:border-darkText dark:text-darkText",
+        "bg-secondary dark:bg-dark-secondary hover:bg-secondary-accent hover:dark:bg-dark-secondary-accent active:scale-95",
+      accent:
+        "bg-accent dark:bg-dark-accent hover:bg-accent-light hover:dark:bg-dark-accent-light active:scale-95",
     };
     
 
